@@ -1,0 +1,145 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-greeting {
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.hero-name {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+.hero-role {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  margin-bottom: 25px;
+  min-height: 2.5rem;
+  color: var(--text-primary);
+}
+
+.typing-text {
+  color: var(--text-primary);
+}
+
+.cursor {
+  color: var(--primary);
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.hero-status {
+  margin-bottom: 35px;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.hero-status h4 {
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.status-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.status-item strong {
+  color: var(--text-primary);
+}
+
+.status-icon {
+  color: var(--primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 100px;
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .hero-status {
+    padding: 15px;
+  }
+}
