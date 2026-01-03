@@ -1,19 +1,19 @@
 import { motion } from 'framer-motion';
 import { 
   FaReact, FaNodeJs, FaPython, FaPhp, FaLaravel, FaBootstrap,
-  FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaAws, FaFigma, FaServer
+  FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaAws, FaFigma, FaServer, FaChartBar
 } from 'react-icons/fa';
 import { 
   SiNextdotjs, SiTypescript, SiMysql, SiPandas, SiScikitlearn,
-  SiPowerbi, SiStreamlit, SiGooglecolab, SiVisualstudiocode
+  SiStreamlit, SiGooglecolab, SiVisualstudiocode
 } from 'react-icons/si';
 import './TechStack.css';
 
 const iconMap = {
   FaReact, FaNodeJs, FaPython, FaPhp, FaLaravel, FaBootstrap,
-  FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaAws, FaFigma, FaServer,
+  FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaAws, FaFigma, FaServer, FaChartBar,
   SiNextdotjs, SiTypescript, SiMysql, SiPandas, SiScikitlearn,
-  SiPowerbi, SiStreamlit, SiGooglecolab, SiVisualstudiocode
+  SiStreamlit, SiGooglecolab, SiVisualstudiocode
 };
 
 const techCategories = [
@@ -45,7 +45,7 @@ const techCategories = [
       { name: 'Python', icon: 'FaPython' },
       { name: 'Pandas', icon: 'SiPandas' },
       { name: 'Scikit-learn', icon: 'SiScikitlearn' },
-      { name: 'Power BI', icon: 'SiPowerbi' },
+      { name: 'Power BI', icon: 'FaChartBar' },
       { name: 'Streamlit', icon: 'SiStreamlit' },
       { name: 'Google Colab', icon: 'SiGooglecolab' },
     ]
