@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaInstagram, FaBriefcase, FaGraduationCap } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaBriefcase, FaGraduationCap, FaCheckCircle, FaRocket } from 'react-icons/fa';
 import { personalInfo } from '../data/content';
 import './Hero.css';
 
@@ -80,17 +80,16 @@ const Hero = () => {
           </motion.p>
 
           <motion.div 
-            className="hero-status"
+            className="hero-status open-to-work"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
           >
-            <h4>Current Status</h4>
+            <div className="status-badge">
+              <FaCheckCircle className="badge-icon pulse" />
+              <span className="badge-text">Open to Work</span>
+            </div>
             <div className="status-items">
-              <div className="status-item">
-                <FaBriefcase className="status-icon" />
-                <span>Data Science Intern <strong>@ VINIX Seven Aurum</strong></span>
-              </div>
               <div className="status-item">
                 <FaGraduationCap className="status-icon" />
                 <span>Information Systems <strong>@ Universitas Siliwangi</strong></span>
