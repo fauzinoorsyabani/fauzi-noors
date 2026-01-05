@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import './MeshBackground.css';
 
 const MeshBackground = () => {
   const canvasRef = useRef(null);
@@ -144,7 +143,13 @@ const MeshBackground = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="mesh-canvas" />;
+  return (
+    <canvas 
+      ref={canvasRef} 
+      className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"
+      style={{ background: 'linear-gradient(180deg, #111111 0%, #0c0c0c 100%)' }}
+    />
+  );
 };
 
 export default MeshBackground;

@@ -12,7 +12,6 @@ import {
 } from 'react-icons/si';
 import { GiOrangeSlice } from 'react-icons/gi';
 import { TbBrandReactNative, TbBrandCSharp, TbLetterC, TbSparkles } from 'react-icons/tb';
-import './TechStack.css';
 
 const iconMap = {
   FaReact, FaNodeJs, FaPython, FaPhp, FaLaravel, FaBootstrap,
@@ -125,7 +124,7 @@ const TechStack = () => {
   };
 
   return (
-    <section id="tech-stack" className="techstack-section section">
+    <section id="tech-stack" className="section bg-dark">
       <div className="container">
         <motion.h2 
           className="section-title"
@@ -136,19 +135,22 @@ const TechStack = () => {
           Tech Stack
         </motion.h2>
 
-        <div className="tech-categories">
+        <div className="flex flex-col gap-12">
           {techCategories.map((category, catIndex) => (
             <motion.div 
               key={category.title}
-              className="tech-category"
+              className="bg-dark-card p-8 rounded-lg border border-border"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: catIndex * 0.1 }}
             >
-              <h3 className="category-title">{category.title}</h3>
+              <h3 className="text-xl text-primary mb-6 pb-2.5 border-b-2 border-border inline-block">
+                {category.title}
+              </h3>
               <motion.div 
-                className="tech-grid"
+                className="grid gap-5 max-md:gap-4"
+                style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))' }}
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -159,15 +161,22 @@ const TechStack = () => {
                   return (
                     <motion.div 
                       key={tech.name}
-                      className="tech-item"
+                      className="flex flex-col items-center justify-center py-6 px-4 max-md:py-5 max-md:px-2.5 bg-dark rounded-md border border-border transition-all duration-300 cursor-default hover:border-primary hover:bg-dark-card-hover group"
                       variants={itemVariants}
                       whileHover={{ 
                         y: -10, 
                         boxShadow: '0 10px 30px rgba(131, 21, 234, 0.2)'
                       }}
                     >
-                      {IconComponent && <IconComponent className="tech-icon" style={{ color: tech.color }} />}
-                      <span className="tech-name">{tech.name}</span>
+                      {IconComponent && (
+                        <IconComponent 
+                          className="text-4xl max-md:text-3xl mb-3 transition-transform duration-300 group-hover:scale-110" 
+                          style={{ color: tech.color }} 
+                        />
+                      )}
+                      <span className="text-sm max-md:text-xs text-text-secondary text-center font-medium">
+                        {tech.name}
+                      </span>
                     </motion.div>
                   );
                 })}
